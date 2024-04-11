@@ -14,7 +14,8 @@ chrome_driver_path=r'chromedriver.exe'
  
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_extension("buster.crx")
-driver = webdriver.Chrome(chrome_driver_path, options=chrome_options)
+#driver = webdriver.Chrome(chrome_driver_path, options=chrome_options)
+driver = webdriver.Chrome( options=chrome_options)
 pageurl = "https://www.kooapp.com/"
 # executable_path=r'chromedriver_win32\chromedriver.exe'
 
