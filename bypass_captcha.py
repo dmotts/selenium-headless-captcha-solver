@@ -15,7 +15,17 @@ chrome_driver_path=r'chromedriver.exe'
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_extension("buster.crx")
 #driver = webdriver.Chrome(chrome_driver_path, options=chrome_options)
-driver = webdriver.Chrome( options=chrome_options)
+#driver = webdriver.Chrome( options=chrome_options)
+
+# Specify the address of Selenium Grid or standalone server
+selenium_grid_url = "http://66.228.58.4:4444/wd/hub"
+
+# Initialize the Remote WebDriver
+driver = webdriver.Remote(
+    command_executor=selenium_grid_url,
+    options=chrome_options
+)
+
 pageurl = "https://www.kooapp.com/"
 # executable_path=r'chromedriver_win32\chromedriver.exe'
 
